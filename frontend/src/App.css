@@ -119,3 +119,8 @@
 .justify-start {
   justify-content: start;
 }
+
+img {
+  width: 100px;
+  height: 100px;
+}

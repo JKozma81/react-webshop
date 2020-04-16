@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Products from './components/Products';
+import ProductDetail from './components/ProductDetail';
 
 function App() {
   return (
@@ -15,12 +16,12 @@ function App() {
             <Route exact path="/">
               <h1>Home</h1>
             </Route>
-            {/* <Route
-              path="/blog/:id"
+            <Route
+              path="/products/:id"
               component={(routProps) => (
-                <PostDetail postId={routProps.match.params.id} />
+                <ProductDetail productId={routProps.match.params.id} />
               )}
-            ></Route> */}
+            ></Route>
             <Route path="/products">
               <Products />
             </Route>
