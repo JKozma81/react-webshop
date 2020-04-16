@@ -1,2 +1,0 @@
-# react-webshop
-React Webshop
