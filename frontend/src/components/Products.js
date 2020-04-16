@@ -26,7 +26,7 @@ export default class Products extends Component {
       return (
         <Link
           key={`link_${idx}`}
-          // to={`/products/${postData.id}`}
+          to={`/products/${product.id}`}
           className="post-link"
         >
           <ProductBox product={product} />
