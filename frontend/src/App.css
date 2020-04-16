@@ -42,7 +42,7 @@
 
 .navlinks {
   margin: 0 auto;
-  width: 1200px;
+  /* width: 1200px; */
   height: 90px;
   list-style-type: none;
   padding-left: 15px;
@@ -110,4 +110,12 @@
   min-height: 200px;
   background-image: linear-gradient(to bottom right, blue, white);
   color: white;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.justify-start {
+  justify-content: start;
 }
