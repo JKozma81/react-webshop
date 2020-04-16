@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import ProductBox from './ProductBox';
+
 export default class Products extends Component {
   state = {
-    productsData: [1, 2, 3, 4, 5, 6, 7, 8],
+    productsData: [],
     loading: false,
   };
 
-  // async componentDidMount() {
-  //   this.setState({ loading: true });
+  async componentDidMount() {
+    this.setState({ loading: true });
 
-  //   const dataStream = await fetch('http://localhost:5000/products');
-  //   const productsData = await dataStream.json();
+    const dataStream = await fetch('http://localhost:5000/products');
+    const productsData = await dataStream.json();
 
-  //   this.setState((state) => ({
-  //     productsData: productsDataFromServer.posts,
-  //     loading: false,
-  //   }));
-  // }
+    this.setState((state) => ({
+      productsData: productsData.products,
+      loading: false,
+    }));
+  }
 
   createProductBoxes = (data) => {
     return data.map((product, idx) => {
@@ -27,7 +29,7 @@ export default class Products extends Component {
           // to={`/products/${postData.id}`}
           className="post-link"
         >
-          Hello
+          <ProductBox product={product} />
         </Link>
       );
     });

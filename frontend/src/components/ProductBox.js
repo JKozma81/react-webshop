@@ -19,6 +19,18 @@ export default class ProductBox extends Component {
   // }
 
   render() {
-    return <div className="d-flex flex-column">Product list</div>;
+    return (
+      <div className="d-flex flex-column">
+        <img src={this.props.product.image} alt="product" />
+        {this.props.product.name}
+        <br />
+        {this.props.product.price}
+        <br />
+        {this.props.product.shortSpec}
+        <br />
+        {this.props.product.shortSpec > 0 ? 'In stock' : 'Out of stock'}
+        <br />
+      </div>
+    );
   }
 }
