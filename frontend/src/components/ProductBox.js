@@ -16,7 +16,11 @@ export default class ProductBox extends Component {
         <br />
         {this.props.product.shortSpec}
         <br />
+<<<<<<< HEAD
         {this.props.product.qty > 0 ? 'In stock' : 'Out of stock'}
+=======
+        {this.props.product.qty> 0 ? 'In stock' : 'Out of stock'}
+>>>>>>> 7ce484da47bca8f9fd8ecfef1252866367d04880
         <br />
       </div>
     );
